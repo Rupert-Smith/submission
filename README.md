@@ -8,18 +8,14 @@ To support my work on the front-end, I have created a **supporting Figma documen
 
 🔗 [Figma Document](<https://www.figma.com/board/AFqj7JG0nBJpOdSSW1rEW2/User-flow-template-(Community)?node-id=0-1&t=hwFtyodq8vg9tKi8-1>)
 
----
-
-## Mobile First
+### Mobile First
 
 Please be aware that this is a **mobile-first solution**. When running the application, it is highly recommended to view it with dimensions associated with a mobile device (320 - 425px) for the best user experience. This can be achieved on Chrome, for example, by utilizing DevTools and clicking the **"Toggle Device Toolbar"** button.
 
 For more information, please visit:  
 🔗 [Chrome DevTools Device Mode](https://developer.chrome.com/docs/devtools/device-mode)
 
----
-
-## Confidentiality
+### Confidentiality
 
 Please be aware that I have replaced all references to "C\*\*\*on" with "Company" in this README file.
 
