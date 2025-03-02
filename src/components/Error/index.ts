@@ -1,3 +1,3 @@
-import { Error } from "./Error";
+import { ErrorComponent } from "./ErrorComponent";
 
-export { Error };
+export { ErrorComponent };

@@ -4,10 +4,13 @@ import { Invest } from "./Invest";
 import { useGetFunds } from "../../hooks/useGetFunds/useGetFunds";
 import { useGetSourceById } from "../../hooks/useGetSourceById/useGetSourceById";
 import { mockFund } from "../../test-utils/fund";
+import { usePostInvestment } from "../../hooks/usePostInvestment/usePostInvestment";
 import { mockSource } from "../../test-utils/source";
+import { BrowserRouter } from "react-router-dom";
 
 jest.mock("../../hooks/useGetFunds/useGetFunds");
 jest.mock("../../hooks/useGetSourceById/useGetSourceById");
+jest.mock("../../hooks/usePostInvestment/usePostInvestment");
 
 describe("Invest page", () => {
   interface Config {
@@ -23,12 +26,21 @@ describe("Invest page", () => {
       error: config.error,
     });
 
+    (usePostInvestment as jest.Mock).mockReturnValue({
+      loading: false,
+      error: false,
+    });
+
     (useGetSourceById as jest.Mock).mockReturnValue({
       source: mockSource,
       loading: config.loading,
       error: config.error,
     });
-    render(<Invest />);
+    render(
+      <BrowserRouter>
+        <Invest />
+      </BrowserRouter>
+    );
   };
 
   test("should render the loading screen", () => {

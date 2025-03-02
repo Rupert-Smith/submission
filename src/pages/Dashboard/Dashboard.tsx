@@ -1,5 +1,6 @@
 import { ReactComponent as PigIcon } from "../../assets/icons/piggy-bank-solid.svg";
 import { useGetInvestments } from "../../hooks/useGetInvestments/useGetInvestments";
+import { Link } from "react-router-dom";
 
 import "./Dashboard.scss";
 
@@ -24,12 +25,12 @@ export const Dashboard = () => {
           <h2>{`£${investmentsFormatted}`}</h2>
         </div>
         <div className={"actionButtons"}>
-          <a href="/invest">
+          <Link to="/invest">
             <button>Invest</button>
-          </a>
-          <a href="/withdraw">
+          </Link>
+          <Link to="/withdraw">
             <button>Review</button>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="curveContainer">

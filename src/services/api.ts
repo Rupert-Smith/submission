@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Source } from "../types/Source";
 import { Fund } from "../types/Fund";
-import { Investment } from "../types/Investments";
+import { Investment, PostInvestment } from "../types/Investments";
 
 const BASE_URL = "http://localhost:8080";
 
@@ -15,8 +15,8 @@ export const getFunds = async () => {
   return (await axiosInstance.get<Fund[]>(`funds`)).data;
 };
 
-export const createInvestment = async (data: Investment) => {
-  await axiosInstance.post("investments", data);
+export const postInvestment = async (data: PostInvestment) => {
+  return await axiosInstance.post("investments", data);
 };
 
 export const getInvestments = async () =>

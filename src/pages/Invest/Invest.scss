@@ -137,6 +137,7 @@
     display: flex;
     gap: 1em;
     border-left: 4px solid var(--colour-brand-primary-500);
+    transition: all 0.3s ease;
 
     .rows {
       width: 100%;
@@ -241,6 +242,11 @@
     }
   }
 
+  .fundCard:hover {
+    cursor: pointer;
+    background-color: var(--colour-neutral-100);
+  }
+
   .fundIcon {
     img {
       width: 2em;
@@ -279,9 +285,8 @@
     padding: 20px;
   }
 
-  .confirmationModal {
+  .modalContainer {
     position: fixed;
-
     top: 0;
     left: 0;
     width: 100%;
@@ -291,6 +296,10 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+
+    h4 {
+      margin-bottom: 1em;
+    }
   }
 
   .modalContent {
@@ -298,8 +307,7 @@
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    width: 380px;
   }
 
   .modalContent p {
@@ -335,17 +343,27 @@
 
     .confirm {
       background-color: var(--colour-brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .confirm:hover {
       background-color: var(--colour-brand-primary-600);
     }
 
+    a {
+      text-decoration: none;
+    }
+
     button {
+      white-space: nowrap;
+      min-width: 50%;
       flex-grow: 1;
       color: var(--colour-brand-secondary);
       font-size: var(--text-size-md);
       padding: 5px 10px;
+      height: 2em;
       border: none;
       border-radius: 5px;
       cursor: pointer;

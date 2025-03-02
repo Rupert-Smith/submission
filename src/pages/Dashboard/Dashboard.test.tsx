@@ -2,6 +2,7 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { mockInvestment } from "../../test-utils/investment";
 import { useGetInvestments } from "../../hooks/useGetInvestments/useGetInvestments";
+import { BrowserRouter } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 
@@ -14,7 +15,11 @@ const renderComponent = () => {
     loading: false,
     error: null,
   });
-  render(<Dashboard />);
+  render(
+    <BrowserRouter>
+      <Dashboard />
+    </BrowserRouter>
+  );
 };
 
 describe("Dashboard page", () => {

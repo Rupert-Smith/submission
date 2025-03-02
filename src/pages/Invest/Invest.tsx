@@ -5,18 +5,23 @@ import { ReactComponent as InfoIcon } from "../../assets/icons/circle-info-solid
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus-solid.svg";
 import { ReactComponent as SackIcon } from "../../assets/icons/sack-dollar-solid.svg";
 import { ReactComponent as PoundIcon } from "../../assets/icons/sterling-sign-regular.svg";
+import ReactLoading from "react-loading";
 
 import { Loading } from "../../components/Loading";
+import { usePostInvestment } from "../../hooks/usePostInvestment/usePostInvestment";
+import { Link, useNavigate } from "react-router-dom";
 import { useGetFunds } from "../../hooks//useGetFunds/useGetFunds";
 import { ChangeEvent } from "react";
 import { useGetSourceById } from "../../hooks/useGetSourceById/useGetSourceById";
-import { Error } from "../../components/Error";
+import { ErrorComponent } from "../../components/Error";
+import { useUser } from "../..//store/UserContext";
 import cushon from "../../assets/logos/cushon.png";
 
 import "./Invest.scss";
 
 export const Invest = () => {
   const { loading: fundsLoading, funds, error: fundsError } = useGetFunds();
+  const { loading: investmentLoading, submitInvestment } = usePostInvestment();
   const {
     loading: sourceLoading,
     source,
@@ -25,7 +30,11 @@ export const Invest = () => {
   const [selectedFund, setSelectedFund] = useState<string | null>();
   const [amount, setAmount] = useState<string | undefined>();
   const [error, setError] = useState("");
-  const [showModal, setShowModal] = useState(false);
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const { user } = useUser();
+  const navigate = useNavigate();
 
   if (sourceLoading || fundsLoading) {
     return (
@@ -37,7 +46,9 @@ export const Invest = () => {
 
   if (sourceError || fundsError) {
     return (
-      <Error errorText={"Something has gone wrong, please contact support"} />
+      <ErrorComponent
+        errorText={"Something has gone wrong, please contact support"}
+      />
     );
   }
 
@@ -60,21 +71,35 @@ export const Invest = () => {
       return;
     }
 
-    const dataToSend = {
-      fundId: selectedFund,
-      amount,
-    };
-
-    setShowModal(true);
+    setShowConfirmationModal(true);
   };
 
-  const handleModalConfirm = () => {
-    setShowModal(false);
-    alert("Investment confirmed!");
+  const handleModalConfirm = async () => {
+    try {
+      if (!selectedFund || !amount || !user)
+        throw new Error("Something went wrong, please contact support");
+
+      const investment = {
+        fundId: selectedFund,
+        amount: parseInt(amount),
+        investmentDate: new Date().toISOString(),
+        customerId: user.id,
+      };
+
+      const result = await submitInvestment(investment);
+
+      if (result !== "Success") throw new Error();
+
+      setShowConfirmationModal(false);
+      setShowSuccessModal(true);
+    } catch (err) {
+      setShowConfirmationModal(false);
+      setShowErrorModal(true);
+    }
   };
 
   const handleModalCancel = () => {
-    setShowModal(false);
+    setShowConfirmationModal(false);
   };
 
   const handleFundSelect = (fundId: string) => {
@@ -85,6 +110,20 @@ export const Invest = () => {
   const handleAmountChange = (event: ChangeEvent<HTMLInputElement>) => {
     setAmount(event.target.value);
     setError("");
+  };
+
+  const handleErrorModalConfirm = () => {
+    setShowErrorModal(false);
+    navigate("/");
+  };
+
+  const handleErrorModalCancel = () => {
+    setShowErrorModal(false);
+  };
+
+  const handleInvestAgain = () => {
+    setShowSuccessModal(false);
+    navigate(0);
   };
 
   const newlyTransferredFunds = 5000;
@@ -159,6 +198,7 @@ export const Invest = () => {
                     </span>
                   </div>
                   <input
+                    onChange={() => {}}
                     type="radio"
                     name="fund"
                     value={fund.id}
@@ -201,19 +241,71 @@ export const Invest = () => {
         </div>
       </section>
 
-      {showModal && (
-        <div className="confirmationModal">
+      {showConfirmationModal && (
+        <div className="modalContainer">
           <div className="modalContent">
+            <h4>Confirm your investment</h4>
             <p>
-              Are you sure you want to invest <span>£{amount}</span> in this
-              fund?
+              Are you sure you want to invest <span>£{amount}</span> in{" "}
+              <span>
+                {funds.filter((fund) => selectedFund === fund.id)[0].name}
+              </span>
+              ?
             </p>
             <div className="modalButtons">
-              <button className="cancel" onClick={handleModalCancel}>
+              <button
+                disabled={investmentLoading}
+                className="cancel"
+                onClick={handleModalCancel}
+              >
                 Cancel
               </button>
-              <button className="confirm" onClick={handleModalConfirm}>
-                Confirm
+              <button
+                disabled={investmentLoading}
+                className="confirm"
+                onClick={handleModalConfirm}
+              >
+                {investmentLoading ? (
+                  <ReactLoading type={"spin"} height={18} width={18} />
+                ) : (
+                  "Confirm"
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {showErrorModal && (
+        <div className="modalContainer">
+          <div className="modalContent">
+            <h4>Error</h4>
+            <p>Error submitting investment</p>
+            <div className="modalButtons">
+              <Link to="/">
+                <button className="cancel" onClick={handleErrorModalConfirm}>
+                  Return to dashboard
+                </button>
+              </Link>
+              <button className="confirm" onClick={handleErrorModalCancel}>
+                Try again
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {showSuccessModal && (
+        <div className="modalContainer">
+          <div className="modalContent">
+            <h4>Congratulations!</h4>
+            <p>Your investment has been placed successfully.</p>
+            <div className="modalButtons">
+              <Link to="/">
+                <button className="cancel" onClick={() => navigate("/")}>
+                  Return to dashboard
+                </button>
+              </Link>
+              <button className="confirm" onClick={handleInvestAgain}>
+                Invest again
               </button>
             </div>
           </div>

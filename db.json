@@ -9,7 +9,99 @@
       "percent": 2.33
     }
   ],
-  "investments": [],
+  "investments": [
+    {
+      "fundId": "1",
+      "amount": 20,
+      "investmentDate": "2025-03-02T12:49:22.755Z",
+      "customerId": "1",
+      "id": 1
+    },
+    {
+      "fundId": "1",
+      "amount": 202,
+      "investmentDate": "2025-03-02T12:51:12.957Z",
+      "customerId": "1",
+      "id": 2
+    },
+    {
+      "fundId": "1",
+      "amount": 203,
+      "investmentDate": "2025-03-02T12:52:22.084Z",
+      "customerId": "1",
+      "id": 3
+    },
+    {
+      "fundId": "1",
+      "amount": 3,
+      "investmentDate": "2025-03-02T12:55:40.526Z",
+      "customerId": "1",
+      "id": 4
+    },
+    {
+      "fundId": "1",
+      "amount": 4,
+      "investmentDate": "2025-03-02T18:39:54.770Z",
+      "customerId": "1",
+      "id": 5
+    },
+    {
+      "fundId": "1",
+      "amount": 2,
+      "investmentDate": "2025-03-02T18:40:12.908Z",
+      "customerId": "1",
+      "id": 6
+    },
+    {
+      "fundId": "1",
+      "amount": 2,
+      "investmentDate": "2025-03-02T18:42:15.560Z",
+      "customerId": "1",
+      "id": 7
+    },
+    {
+      "fundId": "1",
+      "amount": 123,
+      "investmentDate": "2025-03-02T18:42:32.155Z",
+      "customerId": "1",
+      "id": 8
+    },
+    {
+      "fundId": "1",
+      "amount": 123,
+      "investmentDate": "2025-03-02T18:43:22.036Z",
+      "customerId": "1",
+      "id": 9
+    },
+    {
+      "fundId": "1",
+      "amount": 123,
+      "investmentDate": "2025-03-02T18:43:53.480Z",
+      "customerId": "1",
+      "id": 10
+    },
+    {
+      "fundId": "1",
+      "amount": 123,
+      "investmentDate": "2025-03-02T18:44:05.507Z",
+      "customerId": "1",
+      "id": 11
+    },
+    {
+      "fundId": "1",
+      "amount": 3,
+      "investmentDate": "2025-03-02T18:44:54.627Z",
+      "customerId": "1",
+      "id": 12
+    },
+    {
+      "fundId": "1",
+      "amount": 3,
+      "investmentDate": "2025-03-02T18:47:14.345Z",
+      "customerId": "1",
+      "id": 13
+    }
+  ],
   "sources": [
     {
       "id": "1",
