@@ -9,29 +9,15 @@
       "percent": 2.33
     }
   ],
-  "investments": [
-    {
-      "fundId": "1",
-      "amount": 20,
-      "investmentDate": "2025-03-02T22:39:15.591Z",
-      "customerId": "1",
-      "id": 1
-    }
-  ],
+  "investments": [],
   "sources": [
     {
       "id": "1",
       "customerId": "1",
       "sourceName": "James Cushion ISA",
       "sourceType": "ISA",
-      "sourceBalance": 2980,
-      "sourceTransactions": [
-        {
-          "id": "1",
-          "amount": 20,
-          "transactionDate": "2025-03-02T22:39:16.122Z"
-        }
-      ]
+      "sourceBalance": 3000,
+      "sourceTransactions": []
     }
   ]
 }
