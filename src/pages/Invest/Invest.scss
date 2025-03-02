@@ -240,31 +240,31 @@
         border-color: var(--colour-brand-primary);
       }
     }
+
+    .fundIcon {
+      img {
+        width: 2em;
+      }
+      .fundIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--colour-brand-tertiary);
+        padding: 9px;
+        border-radius: 50%;
+
+        svg {
+          color: var(--colour-brand-secondary);
+          width: 1em;
+          height: 1em;
+        }
+      }
+    }
   }
 
   .fundCard:hover {
     cursor: pointer;
     background-color: var(--colour-neutral-100);
-  }
-
-  .fundIcon {
-    img {
-      width: 2em;
-    }
-    .fundIcon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--colour-brand-tertiary);
-      padding: 9px;
-      border-radius: 50%;
-
-      svg {
-        color: var(--colour-brand-secondary);
-        width: 1em;
-        height: 1em;
-      }
-    }
   }
 
   .rowTwo {

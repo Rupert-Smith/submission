@@ -10,7 +10,7 @@ export const Loading = ({ loadingText }: LoadingProps) => {
     <div className="loadingPage">
       <div className="loadingContainer">
         <img src={LoadingImage} alt="loading" />
-        <p>{loadingText}</p>
+        <p>{loadingText || "Loading..."}</p>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./Dashboard.scss";
 
 export const Dashboard = () => {
-  const { investments, loading, error } = useGetInvestments();
+  const { investments } = useGetInvestments();
 
   const investmentsFormatted = investments?.reduce((acc, investment) => {
     return acc + investment.amount;
@@ -28,7 +28,7 @@ export const Dashboard = () => {
           <Link to="/invest">
             <button>Invest</button>
           </Link>
-          <Link to="/withdraw">
+          <Link to="/review">
             <button>Review</button>
           </Link>
         </div>

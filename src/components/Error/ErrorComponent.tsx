@@ -10,7 +10,7 @@ export const ErrorComponent = ({ errorText, errorImage }: ErrorProps) => {
   return (
     <div className="errorContainer">
       <img src={errorImage || ErrorImage} alt="loading" />
-      <p>{errorText}</p>
+      <p>{errorText || "Something went wrong"}</p>
     </div>
   );
 };

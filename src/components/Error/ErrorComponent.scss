@@ -1,4 +1,8 @@
 .errorContainer {
+  * {
+    font-family: var(--font-family-secondary);
+  }
+
   display: flex;
   justify-content: left;
   margin-top: 10em;

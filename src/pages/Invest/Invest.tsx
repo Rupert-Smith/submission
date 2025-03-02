@@ -134,8 +134,17 @@ export const Invest = () => {
   };
 
   const handleAmountChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setAmount(event.target.value);
-    setError("");
+    if (parseInt(event.target.value) < 0) {
+      setAmount("0");
+    } else {
+      setAmount(event.target.value);
+    }
+
+    if (source && parseInt(event.target.value) > source?.sourceBalance) {
+      setError("Cannot invest more than available funds");
+    } else {
+      setError("");
+    }
   };
 
   const handleErrorModalConfirm = () => {
@@ -249,6 +258,7 @@ export const Invest = () => {
           <div className="amountInput">
             <PoundIcon />
             <input
+              min={0}
               type="number"
               placeholder="0.00"
               value={amount}
