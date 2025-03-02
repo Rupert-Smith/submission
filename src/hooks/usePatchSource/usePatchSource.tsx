@@ -10,7 +10,6 @@ export const usePatchSource = () => {
     try {
       setLoading(true);
       const result = await patchSourceApi(id, body);
-      console.log(result);
       if (result.status === 200) {
         return "Success";
       } else {
