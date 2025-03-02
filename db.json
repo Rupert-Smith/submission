@@ -12,136 +12,24 @@
   "investments": [
     {
       "fundId": "1",
-      "amount": 20,
-      "investmentDate": "2025-03-02T12:49:22.755Z",
+      "amount": 3,
+      "investmentDate": "2025-03-02T20:11:15.131Z",
       "customerId": "1",
       "id": 1
     },
     {
       "fundId": "1",
-      "amount": 202,
-      "investmentDate": "2025-03-02T12:51:12.957Z",
+      "amount": 20,
+      "investmentDate": "2025-03-02T20:13:33.217Z",
       "customerId": "1",
       "id": 2
     },
     {
       "fundId": "1",
-      "amount": 203,
-      "investmentDate": "2025-03-02T12:52:22.084Z",
+      "amount": 20,
+      "investmentDate": "2025-03-02T20:14:16.638Z",
       "customerId": "1",
       "id": 3
-    },
-    {
-      "fundId": "1",
-      "amount": 3,
-      "investmentDate": "2025-03-02T12:55:40.526Z",
-      "customerId": "1",
-      "id": 4
-    },
-    {
-      "fundId": "1",
-      "amount": 4,
-      "investmentDate": "2025-03-02T18:39:54.770Z",
-      "customerId": "1",
-      "id": 5
-    },
-    {
-      "fundId": "1",
-      "amount": 2,
-      "investmentDate": "2025-03-02T18:40:12.908Z",
-      "customerId": "1",
-      "id": 6
-    },
-    {
-      "fundId": "1",
-      "amount": 2,
-      "investmentDate": "2025-03-02T18:42:15.560Z",
-      "customerId": "1",
-      "id": 7
-    },
-    {
-      "fundId": "1",
-      "amount": 123,
-      "investmentDate": "2025-03-02T18:42:32.155Z",
-      "customerId": "1",
-      "id": 8
-    },
-    {
-      "fundId": "1",
-      "amount": 123,
-      "investmentDate": "2025-03-02T18:43:22.036Z",
-      "customerId": "1",
-      "id": 9
-    },
-    {
-      "fundId": "1",
-      "amount": 123,
-      "investmentDate": "2025-03-02T18:43:53.480Z",
-      "customerId": "1",
-      "id": 10
-    },
-    {
-      "fundId": "1",
-      "amount": 123,
-      "investmentDate": "2025-03-02T18:44:05.507Z",
-      "customerId": "1",
-      "id": 11
-    },
-    {
-      "fundId": "1",
-      "amount": 3,
-      "investmentDate": "2025-03-02T18:44:54.627Z",
-      "customerId": "1",
-      "id": 12
-    },
-    {
-      "fundId": "1",
-      "amount": 3,
-      "investmentDate": "2025-03-02T18:47:14.345Z",
-      "customerId": "1",
-      "id": 13
-    },
-    {
-      "fundId": "1",
-      "amount": 103,
-      "investmentDate": "2025-03-02T19:26:05.882Z",
-      "customerId": "1",
-      "id": 14
-    },
-    {
-      "fundId": "1",
-      "amount": 1000,
-      "investmentDate": "2025-03-02T19:27:36.065Z",
-      "customerId": "1",
-      "id": 15
-    },
-    {
-      "fundId": "1",
-      "amount": 1000,
-      "investmentDate": "2025-03-02T19:27:53.606Z",
-      "customerId": "1",
-      "id": 16
-    },
-    {
-      "fundId": "1",
-      "amount": 1000,
-      "investmentDate": "2025-03-02T19:29:08.052Z",
-      "customerId": "1",
-      "id": 17
-    },
-    {
-      "fundId": "1",
-      "amount": 1000,
-      "investmentDate": "2025-03-02T19:39:20.934Z",
-      "customerId": "1",
-      "id": 18
-    },
-    {
-      "fundId": "1",
-      "amount": 1000,
-      "investmentDate": "2025-03-02T19:39:32.343Z",
-      "customerId": "1",
-      "id": 19
     }
   ],
   "sources": [
@@ -150,42 +38,22 @@
       "customerId": "1",
       "sourceName": "James Cushion ISA",
       "sourceType": "ISA",
-      "sourceBalance": 47174.21,
+      "sourceBalance": 2957,
       "sourceTransactions": [
         {
           "id": "1",
-          "amount": 25000,
-          "transactionDate": "2025-03-01T12:34:56.789Z"
+          "amount": 3,
+          "transactionDate": "2025-03-02T20:11:15.670Z"
         },
         {
           "id": "2",
-          "amount": 103,
-          "transactionDate": "2025-03-02T19:26:06.411Z"
+          "amount": 20,
+          "transactionDate": "2025-03-02T20:13:33.735Z"
         },
         {
           "id": "3",
-          "amount": 1000,
-          "transactionDate": "2025-03-02T19:27:36.580Z"
-        },
-        {
-          "id": "4",
-          "amount": 1000,
-          "transactionDate": "2025-03-02T19:27:54.120Z"
-        },
-        {
-          "id": "5",
-          "amount": 1000,
-          "transactionDate": "2025-03-02T19:29:08.570Z"
-        },
-        {
-          "id": "6",
-          "amount": 1000,
-          "transactionDate": "2025-03-02T19:39:21.452Z"
-        },
-        {
-          "id": "7",
-          "amount": 1000,
-          "transactionDate": "2025-03-02T19:39:32.855Z"
+          "amount": 20,
+          "transactionDate": "2025-03-02T20:14:17.154Z"
         }
       ]
     }

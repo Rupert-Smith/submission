@@ -14,16 +14,10 @@
     {
       "id": "1",
       "customerId": "1",
-      "accountType": "ISA",
-      "accountBalance": 52174.21,
-      "accountTransactions": [
-        {
-          "id": "1",
-          "payeeId": "1",
-          "amount": 25000,
-          "transactionDate": "2025-03-01"
-        }
-      ]
+      "sourceName": "James Cushion ISA",
+      "sourceType": "ISA",
+      "sourceBalance": 3000,
+      "sourceTransactions": []
     }
   ]
 }

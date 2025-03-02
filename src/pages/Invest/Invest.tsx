@@ -5,6 +5,8 @@ import { ReactComponent as InfoIcon } from "../../assets/icons/circle-info-solid
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus-solid.svg";
 import { ReactComponent as SackIcon } from "../../assets/icons/sack-dollar-solid.svg";
 import { ReactComponent as PoundIcon } from "../../assets/icons/sterling-sign-regular.svg";
+import cushon from "../../assets/logos/cushon.png";
+import noFunds from "../../assets/images/empty.png";
 import ReactLoading from "react-loading";
 
 import { Loading } from "../../components/Loading";
@@ -15,7 +17,6 @@ import { ChangeEvent } from "react";
 import { useGetSourceById } from "../../hooks/useGetSourceById/useGetSourceById";
 import { ErrorComponent } from "../../components/Error";
 import { useUser } from "../..//store/UserContext";
-import cushon from "../../assets/logos/cushon.png";
 import { usePatchSource } from "../../hooks/usePatchSource/usePatchSource";
 
 import "./Invest.scss";
@@ -50,6 +51,15 @@ export const Invest = () => {
     return (
       <ErrorComponent
         errorText={"Something has gone wrong, please contact support"}
+      />
+    );
+  }
+
+  if (source && source?.sourceBalance <= 0) {
+    return (
+      <ErrorComponent
+        errorImage={noFunds}
+        errorText={"Looks like there are no funds available to invest."}
       />
     );
   }
@@ -297,7 +307,7 @@ export const Invest = () => {
             <div className="modalButtons">
               <Link to="/">
                 <button className="cancel" onClick={handleErrorModalConfirm}>
-                  Return to dashboard
+                  To dashboard
                 </button>
               </Link>
               <button className="confirm" onClick={handleErrorModalCancel}>
@@ -315,7 +325,7 @@ export const Invest = () => {
             <div className="modalButtons">
               <Link to="/">
                 <button className="cancel" onClick={() => navigate("/")}>
-                  Return to dashboard
+                  To dashboard
                 </button>
               </Link>
               <button className="confirm" onClick={handleInvestAgain}>

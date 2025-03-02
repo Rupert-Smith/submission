@@ -37,7 +37,7 @@ export const Dashboard = () => {
         <div className="curveSection"></div>
       </div>
       <section className="investmentSection">
-        <div>Hope you're enjoying my demo! Click to reset!</div>
+        {/* <div>Hope you're enjoying my demo! Click to reset!</div> */}
       </section>
     </>
   );
