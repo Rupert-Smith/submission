@@ -1,6 +1,6 @@
 # Retail Customer Mobile Solution
 
-## Important
+## Important - **PLEASE READ**
 
 ### Supporting Document
 
