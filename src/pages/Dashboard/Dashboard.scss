@@ -1,0 +1,119 @@
+.container {
+  padding: 1em;
+  padding-bottom: 0em;
+
+  * {
+    font-family: var(--font-family-secondary);
+  }
+
+  background-color: var(--colour-brand-primary);
+
+  .retailIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colour-brand-primary-200);
+    padding: 9px;
+    border-radius: 50%;
+
+    svg {
+      color: var(--colour-neutral-800);
+      width: 1.5em;
+      height: 1.5em;
+      // margin-top: -0.1em;
+    }
+  }
+
+  .retailComponent {
+    color: var(--colour-brand-secondary);
+    display: flex;
+    gap: 0.1em;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: var(--text-size-md);
+      margin: 0;
+    }
+  }
+
+  h2 {
+    font-family: var(--font-family-display-secondary);
+  }
+
+  img {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+.header {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  text-align: center;
+  padding: 2em 2em;
+  color: var(--colour-brand-secondary);
+}
+
+.actionButtons {
+  padding-bottom: 1em;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+
+  a {
+    display: inline-flex;
+    max-width: 15em;
+    flex-basis: 0;
+    flex-grow: 1;
+    text-decoration: none;
+  }
+
+  button {
+    width: 100%;
+    background-color: var(--colour-brand-primary-600);
+    color: white;
+    padding: 0.7em 1.5em;
+    font-size: var(--text-size-md);
+    font-weight: 600;
+    border: 2px solid var(--colour-brand-primary-700);
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  button:hover {
+    background-color: var(--colour-brand-primary-700);
+    transform: scale(1.05);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 31, 131, 0.4);
+  }
+}
+
+.curveContainer {
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  height: 18em;
+}
+
+.curveSection {
+  width: 200%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--colour-brand-primary);
+  bottom: 88%;
+  left: -50%;
+  right: 0;
+  position: relative;
+}

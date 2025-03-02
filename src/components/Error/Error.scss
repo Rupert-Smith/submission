@@ -1,0 +1,18 @@
+.errorContainer {
+  display: flex;
+  justify-content: left;
+  margin-top: 10em;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  img {
+    width: 15em;
+  }
+
+  p {
+    margin-top: 1em;
+    color: var(--colour-neutral-500);
+    font-size: var(--text-size-sm);
+  }
+}

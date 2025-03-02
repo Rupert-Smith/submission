@@ -1,0 +1,20 @@
+.navigation {
+  background-color: var(--colour-brand-primary);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+
+    width: 1.4em;
+    color: var(--colour-brand-secondary);
+    transition: 0.3s ease, transform 0.2s ease;
+  }
+
+  svg:hover {
+    cursor: pointer;
+    color: var(--colour-brand-primary-100); /* Change the color on hover */
+    transform: scale(1.1); /* Slightly increase the size of the icon */
+  }
+}

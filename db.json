@@ -1,0 +1,30 @@
+{
+  "funds": [
+    {
+      "id": "1",
+      "name": "Cushon Equities Fund",
+      "description": "A high-risk fund focused on equities with the potential for higher returns.",
+      "category": "High-risk fund",
+      "price": 1,
+      "percent": 2.33
+    }
+  ],
+  "investments": [],
+  "sources": [
+    {
+      "id": "1",
+      "customerId": "1",
+      "sourceName": "James Cushion ISA",
+      "sourceType": "ISA",
+      "sourceBalance": 52174.21,
+      "sourceTransactions": [
+        {
+          "id": "1",
+          "payeeId": "1",
+          "amount": 25000,
+          "transactionDate": "2025-03-01T12:34:56.789Z"
+        }
+      ]
+    }
+  ]
+}

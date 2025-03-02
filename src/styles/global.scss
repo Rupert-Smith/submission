@@ -1,0 +1,40 @@
+@use "_colours";
+@use "_typography";
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h6 {
+  font-size: var(--text-size-sm);
+  margin: 0;
+}
+
+h5 {
+  font-size: var(--text-size-lg);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--display-size-xs);
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: var(--display-size-md);
+}
+
+a {
+  display: inline-block;
+  width: fit-content;
+}
+
+p {
+  margin: 0;
+}

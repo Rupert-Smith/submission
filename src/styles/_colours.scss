@@ -1,0 +1,68 @@
+:root {
+  /* Retail Brand Colors */
+  --colour-brand-primary: #4dace4;
+  --colour-brand-secondary: rgb(252, 251, 245);
+  --colour-brand-tertiary: rgb(90, 40, 125);
+  --colour-brand-accent: rgb(220, 31, 131);
+
+  --colour-brand-primary-100: rgb(185, 209, 228);
+  --colour-brand-primary-200: rgb(160, 192, 217);
+  --colour-brand-primary-300: rgb(135, 175, 206);
+  --colour-brand-primary-400: rgb(110, 158, 195);
+  --colour-brand-primary-500: #4dace4;
+  --colour-brand-primary-600: #4298c9;
+  --colour-brand-primary-700: #3680ab;
+  --colour-brand-primary-800: rgb(10, 90, 151);
+  --colour-brand-primary-900: rgb(0, 73, 140);
+  --colour-brand-primary-1000: rgb(0, 66, 130);
+
+  /* Employee Colors */
+  // --colour-brand-primary: rgb(220, 31, 131);
+  // --colour-brand-secondary: rgb(252, 251, 245);
+  // --colour-brand-accent: rgb(90, 40, 125);
+
+  // --colour-brand-primary-100: rgb(249, 194, 222);
+  // --colour-brand-primary-200: rgb(244, 143, 191);
+  // --colour-brand-primary-300: rgb(237, 92, 161);
+  // --colour-brand-primary-400: rgb(230, 61, 146);
+  // --colour-brand-primary-500: rgb(220, 31, 131);
+  // --colour-brand-primary-600: rgb(198, 28, 118);
+  // --colour-brand-primary-700: rgb(176, 25, 105);
+  // --colour-brand-primary-800: rgb(154, 22, 92);
+  // --colour-brand-primary-900: rgb(132, 19, 79);
+  // --colour-brand-primary-1000: rgb(124, 18, 75);
+
+  /* Neutral Scale */
+  --colour-neutral-900: rgb(0, 0, 0);
+  --colour-neutral-800: rgb(43, 43, 43);
+  --colour-neutral-700: rgb(85, 85, 85);
+  --colour-neutral-600: rgb(100, 96, 104);
+  --colour-neutral-500: rgb(102, 102, 102);
+  --colour-neutral-400: rgb(139, 155, 173);
+  --colour-neutral-300: rgb(200, 200, 200);
+  --colour-neutral-200: rgb(229, 229, 229);
+  --colour-neutral-100: rgb(244, 244, 244);
+  --colour-neutral-50: rgb(255, 254, 248);
+
+  /* Support Colors */
+  --colour-positive-dark: rgb(41, 135, 126);
+  --colour-positive-light: rgb(88, 203, 168);
+  --colour-negative: rgb(213, 88, 56);
+  --colour-warning: rgb(240, 160, 69);
+  --colour-info-dark: rgb(27, 127, 195);
+  --colour-info-light: #4dace4;
+  --colour-highlight: rgb(231, 102, 159);
+  --colour-muted: rgb(149, 199, 92);
+
+  /* Decorative Colors */
+  --colour-decor-magenta: rgb(231, 102, 159);
+  --colour-decor-purple-dark: rgb(90, 40, 125);
+  --colour-decor-purple-bright: rgb(94, 16, 177);
+  --colour-decor-teal-dark: rgb(41, 135, 126);
+  --colour-decor-teal-light: rgb(88, 203, 168);
+  --colour-decor-green: rgb(217, 233, 196);
+  --colour-decor-gold: rgb(127, 132, 67);
+  --colour-decor-olive: rgb(96, 95, 49);
+  --colour-decor-orange: rgb(240, 160, 69);
+  --colour-decor-red: rgb(213, 88, 56);
+}

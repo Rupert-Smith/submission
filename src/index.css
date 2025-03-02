@@ -1,13 +1,59 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "KnileRegular";
+  src: local("KnileRegular"),
+    url("./assets/fonts/Knile-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MuseoSans100";
+  src: local("MuseoSans100"),
+    url("./assets/fonts/MuseoSans_100.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans300";
+  src: local("MuseoSans300"),
+    url("./assets/fonts/MuseoSans_300.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans500";
+  src: local("MuseoSans500"),
+    url("./assets/fonts/MuseoSans_500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans700";
+  src: local("MuseoSans700"),
+    url("./assets/fonts/MuseoSans_700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans900";
+  src: local("MuseoSans900"),
+    url("./assets/fonts/MuseoSans_900.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }

@@ -1,0 +1,24 @@
+.loadingPage {
+  // display: flex;
+  // justify-content: center;
+  // height: 100%;
+}
+
+.loadingPage img {
+  width: 10em;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: left;
+  margin-top: 10em;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  p {
+    margin-top: 1em;
+    color: var(--colour-neutral-500);
+    font-size: var(--text-size-sm);
+  }
+}

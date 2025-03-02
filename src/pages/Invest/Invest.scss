@@ -1,0 +1,383 @@
+.investContainer {
+  padding: 2em 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  * {
+    font-family: var(--font-family-secondary);
+  }
+
+  .bankIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colour-brand-accent);
+    padding: 9px;
+    border-radius: 50%;
+
+    svg {
+      color: var(--colour-brand-secondary);
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  .headingSection {
+    max-width: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      border: none;
+      border-radius: 50%;
+      background-color: var(--colour-brand-tertiary);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      padding: 0.5em;
+      font-family: var(--font-family-secondary-900);
+      font-size: var(--text-size-sm);
+
+      svg {
+        width: 1em;
+        height: 1em;
+        color: var(--colour-brand-secondary);
+      }
+    }
+  }
+
+  .amountInput {
+    background-color: var(--colour-neutral-200);
+    display: flex;
+    position: relative;
+
+    svg {
+      position: absolute;
+      width: 0.5em;
+      top: 14px;
+      left: 14px;
+    }
+
+    input {
+      background-color: var(--colour-neutral-200);
+      border: none;
+      width: 100%;
+      font-size: var(--text-size-md);
+      padding: 12px 27px;
+    }
+  }
+
+  .sectionDescription {
+    margin-top: 0.5em;
+    color: var(--colour-neutral-500);
+    font-size: var(--text-size-md);
+  }
+
+  .sectionContent {
+    margin-top: 1em;
+    max-width: 35em;
+  }
+
+  .card {
+    max-width: 35em;
+    padding: 0.5em 0.5em;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3em;
+    align-items: center;
+    gap: 0.8em;
+    display: flex;
+  }
+
+  .sourceCard {
+    border-left: 4px solid var(--colour-neutral-400);
+    background-color: var(--colour-neutral-100);
+
+    span {
+      color: var(--colour-neutral-500);
+      font-size: var(--text-size-sm);
+    }
+
+    .bold {
+      font-family: var(--font-family-secondary-900);
+    }
+  }
+
+  .sourceSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h4 {
+    font-family: var(--font-family-secondary-900);
+  }
+
+  .availableFunds {
+    color: var(--colour-neutral-500);
+    margin: 0;
+    font-size: var(--text-size-md);
+  }
+
+  .totalAmount {
+    font-family: var(--font-family-secondary-900);
+    margin: 0;
+    padding: 0.2em 0;
+    font-size: var(--display-size-md);
+  }
+
+  .helperText {
+    margin-top: 1em;
+    color: var(--colour-neutral-500);
+    font-size: var(--text-size-sm);
+  }
+
+  .fundCard {
+    justify-content: space-between;
+    display: flex;
+    gap: 1em;
+    border-left: 4px solid var(--colour-brand-primary-500);
+
+    .rows {
+      width: 100%;
+      display: flex;
+      gap: 1em;
+      flex-direction: column;
+    }
+
+    .rowOne {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+    }
+
+    p {
+      color: var(--colour-neutral-500);
+      font-size: var(--text-size-sm);
+      margin: 0;
+    }
+
+    .leftSection {
+      display: flex;
+      gap: 0.6em;
+    }
+
+    .leftSectionText {
+      display: flex;
+      gap: 0.2em;
+      flex-direction: column;
+
+      h6 {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+
+      svg {
+        color: var(--colour-info-dark);
+        width: 1em;
+      }
+
+      svg:hover {
+        cursor: pointer;
+      }
+    }
+
+    .rightSection {
+      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      font-size: var(--text-size-sm);
+      font-family: var(--font-family-secondary-900);
+
+      .positive {
+        color: var(--colour-positive-dark);
+      }
+
+      .negative {
+        color: var(--colour-negative);
+      }
+
+      span {
+        font-family: var(--font-family-secondary-900);
+      }
+    }
+
+    .rightSectionText {
+      display: flex;
+      gap: 0.4em;
+      flex-direction: column;
+    }
+
+    input[type="radio"] {
+      accent-color: var(--colour-brand-primary);
+      border: 4px solid var(--colour-brand-primary);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+
+      &:checked {
+        background-color: var(--colour-brand-primary);
+        border: 4px solid var(--colour-brand-primary);
+
+        &::before {
+          background-color: var(--colour-brand-secondary);
+          transform: scale(0.5);
+        }
+      }
+
+      &:hover {
+        border-color: var(--colour-brand-primary);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--colour-brand-primary);
+      }
+    }
+  }
+
+  .fundIcon {
+    img {
+      width: 2em;
+    }
+    .fundIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--colour-brand-tertiary);
+      padding: 9px;
+      border-radius: 50%;
+
+      svg {
+        color: var(--colour-brand-secondary);
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+
+  .rowTwo {
+    display: flex;
+    justify-content: right;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  // ----------------------------
+
+  .investContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .confirmationModal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modalContent {
+    background-color: var(--colour-brand-secondary);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+
+  .modalContent p {
+    font-size: var(--text-size-lg);
+    margin-bottom: 20px;
+
+    span {
+      font-family: var(--font-family-secondary-700);
+    }
+  }
+
+  .modalButtons {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+
+    .cancel {
+      color: var(--colour-neutral-800);
+      font-size: var(--text-size-md);
+      background-color: var(--colour-brand-secondary);
+      padding: 5px 10px;
+      border: 1px solid var(--colour-neutral-200);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cancel:hover {
+      color: var(--colour-brand-secondary);
+      background-color: var(--colour-brand-primary-600);
+    }
+
+    .confirm {
+      background-color: var(--colour-brand-primary);
+    }
+
+    .confirm:hover {
+      background-color: var(--colour-brand-primary-600);
+    }
+
+    button {
+      flex-grow: 1;
+      color: var(--colour-brand-secondary);
+      font-size: var(--text-size-md);
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  }
+
+  .actionButtons {
+    max-width: 35em;
+    display: flex;
+    justify-content: left;
+
+    button {
+      background-color: var(--colour-brand-primary);
+      color: var(--colour-brand-secondary);
+      font-size: var(--text-size-md);
+      padding: 10px 50px;
+      width: fit-content;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--colour-brand-primary-600);
+    }
+  }
+
+  .error {
+    color: var(--colour-negative);
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
