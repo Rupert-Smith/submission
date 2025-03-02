@@ -10,7 +10,6 @@ export const usePostInvestment = () => {
     try {
       setLoading(true);
       const result = await postInvestment(investment);
-      console.log(result.status);
       if (result.status === 201) {
         return "Success";
       } else {

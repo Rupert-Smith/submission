@@ -2,6 +2,7 @@ import axios from "axios";
 import { Source } from "../types/Source";
 import { Fund } from "../types/Fund";
 import { Investment, PostInvestment } from "../types/Investments";
+import { PatchSource } from "../types/Source";
 
 const BASE_URL = "http://localhost:8080";
 
@@ -21,3 +22,7 @@ export const postInvestment = async (data: PostInvestment) => {
 
 export const getInvestments = async () =>
   (await axiosInstance.get<Investment[]>("investments")).data;
+
+export const patchSource = async (id: string, body: PatchSource) => {
+  return await axiosInstance.patch(`sources/${id}`, body);
+};

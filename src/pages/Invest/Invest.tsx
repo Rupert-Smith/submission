@@ -16,6 +16,7 @@ import { useGetSourceById } from "../../hooks/useGetSourceById/useGetSourceById"
 import { ErrorComponent } from "../../components/Error";
 import { useUser } from "../..//store/UserContext";
 import cushon from "../../assets/logos/cushon.png";
+import { usePatchSource } from "../../hooks/usePatchSource/usePatchSource";
 
 import "./Invest.scss";
 
@@ -35,6 +36,7 @@ export const Invest = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { user } = useUser();
   const navigate = useNavigate();
+  const { patchSource } = usePatchSource();
 
   if (sourceLoading || fundsLoading) {
     return (
@@ -76,7 +78,7 @@ export const Invest = () => {
 
   const handleModalConfirm = async () => {
     try {
-      if (!selectedFund || !amount || !user)
+      if (!selectedFund || !amount || !user || !source)
         throw new Error("Something went wrong, please contact support");
 
       const investment = {
@@ -86,9 +88,23 @@ export const Invest = () => {
         customerId: user.id,
       };
 
-      const result = await submitInvestment(investment);
+      const submitInvestmentResult = await submitInvestment(investment);
 
-      if (result !== "Success") throw new Error();
+      if (submitInvestmentResult !== "Success") throw new Error();
+
+      const submitPatchSourceResult = await patchSource(source?.id, {
+        sourceBalance: source.sourceBalance - parseInt(amount),
+        sourceTransactions: [
+          ...source?.sourceTransactions,
+          {
+            id: `${source?.sourceTransactions.length + 1}`,
+            amount: parseInt(amount),
+            transactionDate: new Date().toISOString(),
+          },
+        ],
+      });
+
+      if (submitPatchSourceResult !== "Success") throw new Error();
 
       setShowConfirmationModal(false);
       setShowSuccessModal(true);
@@ -126,16 +142,14 @@ export const Invest = () => {
     navigate(0);
   };
 
-  const newlyTransferredFunds = 5000;
   const sourceBalance = source?.sourceBalance;
-  const totalAmount = sourceBalance && sourceBalance - newlyTransferredFunds;
 
   return (
     <div className={"investContainer"}>
       <section>
         <p className={"availableFunds"}> Total available funds to invest</p>
         <p className={"totalAmount"}>
-          {totalAmount ? formatAmount(totalAmount) : "Loading..."}
+          {sourceBalance ? formatAmount(sourceBalance) : "Loading..."}
         </p>
       </section>
 

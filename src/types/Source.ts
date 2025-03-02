@@ -1,6 +1,5 @@
 type SourceTransaction = {
   id: string;
-  payeeId: string;
   amount: number;
   transactionDate: string;
 };
@@ -12,4 +11,12 @@ export type Source = {
   sourceBalance: number;
   sourceTransactions: SourceTransaction[];
   sourceName: string;
+};
+
+export type PatchSource = {
+  customerId?: string;
+  sourceType?: "ISA" | "GIA" | "SIPP";
+  sourceBalance?: number;
+  sourceTransactions?: SourceTransaction[];
+  sourceName?: string;
 };

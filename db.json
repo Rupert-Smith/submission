@@ -100,6 +100,48 @@
       "investmentDate": "2025-03-02T18:47:14.345Z",
       "customerId": "1",
       "id": 13
+    },
+    {
+      "fundId": "1",
+      "amount": 103,
+      "investmentDate": "2025-03-02T19:26:05.882Z",
+      "customerId": "1",
+      "id": 14
+    },
+    {
+      "fundId": "1",
+      "amount": 1000,
+      "investmentDate": "2025-03-02T19:27:36.065Z",
+      "customerId": "1",
+      "id": 15
+    },
+    {
+      "fundId": "1",
+      "amount": 1000,
+      "investmentDate": "2025-03-02T19:27:53.606Z",
+      "customerId": "1",
+      "id": 16
+    },
+    {
+      "fundId": "1",
+      "amount": 1000,
+      "investmentDate": "2025-03-02T19:29:08.052Z",
+      "customerId": "1",
+      "id": 17
+    },
+    {
+      "fundId": "1",
+      "amount": 1000,
+      "investmentDate": "2025-03-02T19:39:20.934Z",
+      "customerId": "1",
+      "id": 18
+    },
+    {
+      "fundId": "1",
+      "amount": 1000,
+      "investmentDate": "2025-03-02T19:39:32.343Z",
+      "customerId": "1",
+      "id": 19
     }
   ],
   "sources": [
@@ -108,13 +150,42 @@
       "customerId": "1",
       "sourceName": "James Cushion ISA",
       "sourceType": "ISA",
-      "sourceBalance": 52174.21,
+      "sourceBalance": 47174.21,
       "sourceTransactions": [
         {
           "id": "1",
-          "payeeId": "1",
           "amount": 25000,
           "transactionDate": "2025-03-01T12:34:56.789Z"
+        },
+        {
+          "id": "2",
+          "amount": 103,
+          "transactionDate": "2025-03-02T19:26:06.411Z"
+        },
+        {
+          "id": "3",
+          "amount": 1000,
+          "transactionDate": "2025-03-02T19:27:36.580Z"
+        },
+        {
+          "id": "4",
+          "amount": 1000,
+          "transactionDate": "2025-03-02T19:27:54.120Z"
+        },
+        {
+          "id": "5",
+          "amount": 1000,
+          "transactionDate": "2025-03-02T19:29:08.570Z"
+        },
+        {
+          "id": "6",
+          "amount": 1000,
+          "transactionDate": "2025-03-02T19:39:21.452Z"
+        },
+        {
+          "id": "7",
+          "amount": 1000,
+          "transactionDate": "2025-03-02T19:39:32.855Z"
         }
       ]
     }
