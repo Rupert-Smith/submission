@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# Retail Customer Mobile Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Important
 
-## Available Scripts
+### Supporting Document
 
-In the project directory, you can run:
+To support my work on the front-end, I have created a **supporting Figma document**. I would advise taking a look at this document first, as it will help illustrate my thought process and approach to the project.
 
-### `npm start`
+🔗 [Figma Document](<https://www.figma.com/board/AFqj7JG0nBJpOdSSW1rEW2/User-flow-template-(Community)?node-id=0-1&t=hwFtyodq8vg9tKi8-1>)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Mobile First
 
-### `npm test`
+Please be aware that this is a **mobile-first solution**. When running the application, it is highly recommended to view it with dimensions associated with a mobile device (320 - 425px) for the best user experience. This can be achieved on Chrome, for example, by utilizing DevTools and clicking the **"Toggle Device Toolbar"** button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For more information, please visit:  
+🔗 [Chrome DevTools Device Mode](https://developer.chrome.com/docs/devtools/device-mode)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Confidentiality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please be aware that I have replaced all references to "C\*\*\*on" with "Company" in this README file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Overview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is a React-based mobile application built specifically for retail customers looking to invest in a Company ISA. Unlike Company's existing employer-based offering, this application is tailored for direct, individual investors who are not affiliated with a participating employer.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Mobile-First Design**
+- **Invest Page**: Customers select a fund and enter the amount they wish to invest.
+- **Review Page**: Displays a summary of the selected fund and investment amount.
+- **Modal Windows**: Used for confirmations, errors, and important messages.
+- **Working Mock Backend**: Simulates API responses.
+- **TDD (Test-Driven Development)**
+- **Form Validation**
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Run `npm install` to install the project dependencies.
+2. Run `npm run server` to start a local server.
+3. Run `npm run start` to start the application.
+
+---
+
+## Thoughts and Comments
+
+I greatly enjoyed this challenge! There is a lot to talk about, and I look forward to our discussion on Tuesday. I spent a great deal of time planning to ensure a meaningful solution. I found market research, along with general research and UX, was key.
+
+Thank you for your consideration!  
+**- Rupert**
