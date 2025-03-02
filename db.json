@@ -12,45 +12,10 @@
   "investments": [
     {
       "fundId": "1",
-      "amount": 3,
-      "investmentDate": "2025-03-02T20:11:15.131Z",
+      "amount": 20,
+      "investmentDate": "2025-03-02T22:39:15.591Z",
       "customerId": "1",
       "id": 1
-    },
-    {
-      "fundId": "1",
-      "amount": 20,
-      "investmentDate": "2025-03-02T20:13:33.217Z",
-      "customerId": "1",
-      "id": 2
-    },
-    {
-      "fundId": "1",
-      "amount": 20,
-      "investmentDate": "2025-03-02T20:14:16.638Z",
-      "customerId": "1",
-      "id": 3
-    },
-    {
-      "fundId": "1",
-      "amount": 30,
-      "investmentDate": "2025-03-02T20:24:08.738Z",
-      "customerId": "1",
-      "id": 4
-    },
-    {
-      "fundId": "1",
-      "amount": 100,
-      "investmentDate": "2025-03-02T20:24:23.285Z",
-      "customerId": "1",
-      "id": 5
-    },
-    {
-      "fundId": "1",
-      "amount": 300,
-      "investmentDate": "2025-03-02T22:16:34.001Z",
-      "customerId": "1",
-      "id": 6
     }
   ],
   "sources": [
@@ -59,37 +24,12 @@
       "customerId": "1",
       "sourceName": "James Cushion ISA",
       "sourceType": "ISA",
-      "sourceBalance": 2527,
+      "sourceBalance": 2980,
       "sourceTransactions": [
         {
           "id": "1",
-          "amount": 3,
-          "transactionDate": "2025-03-02T20:11:15.670Z"
-        },
-        {
-          "id": "2",
           "amount": 20,
-          "transactionDate": "2025-03-02T20:13:33.735Z"
-        },
-        {
-          "id": "3",
-          "amount": 20,
-          "transactionDate": "2025-03-02T20:14:17.154Z"
-        },
-        {
-          "id": "4",
-          "amount": 30,
-          "transactionDate": "2025-03-02T20:24:09.255Z"
-        },
-        {
-          "id": "5",
-          "amount": 100,
-          "transactionDate": "2025-03-02T20:24:23.800Z"
-        },
-        {
-          "id": "6",
-          "amount": 300,
-          "transactionDate": "2025-03-02T22:16:34.518Z"
+          "transactionDate": "2025-03-02T22:39:16.122Z"
         }
       ]
     }

@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    line-height: 1.2em;
+    line-height: 1.4em;
     gap: 1em;
     img {
       width: 12em;
@@ -34,7 +34,7 @@
       margin-top: 1em;
       text-align: center;
       color: var(--colour-neutral-500);
-      font-size: var(--text-size-sm);
+      font-size: var(--text-size-md);
     }
 
     span {

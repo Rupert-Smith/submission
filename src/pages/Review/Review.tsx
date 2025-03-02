@@ -90,7 +90,7 @@ export const Review = () => {
         time.
       </p>
       <section>
-        {formattedData &&
+        {formattedData.length !== 0 &&
           formattedData.map((investment) => (
             <div className={`card fundCard`} key={investment.fundId}>
               <div className={"leftSection"}>
@@ -111,11 +111,11 @@ export const Review = () => {
               </div>
             </div>
           ))}
-        {!formattedData && (
+        {formattedData.length === 0 && (
           <div className={"noInvestments"}>
             <img src={thinking} alt="Person thinking" />
             <p>
-              Looks like you haven't placed any investments!
+              No investments found!
               <br />{" "}
               <span>
                 <Link to="/invest">Click here to place a new investment.</Link>
