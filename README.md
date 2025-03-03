@@ -46,6 +46,8 @@ This is a React-based mobile application built specifically for retail customers
 3. Run `npm run test` to run test files.
 4. Run `npm run start` to start the application.
 
+To reset the back-end data you will need to copy the contents of 'backup_db.json' over to 'db.json' and restart the server.
+
 ---
 
 ## 💭 Thoughts and Comments
